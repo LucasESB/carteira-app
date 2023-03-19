@@ -6,11 +6,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Routes } from './src/routes';
 import theme from './src/styles/theme';
 
-import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
+import { useFonts, DMSans_700Bold } from '@expo-google-fonts/dm-sans';
+import { Quicksand_400Regular, Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_700Bold } from '@expo-google-fonts/quicksand';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    DMSans_400Regular
+    DMSans_700Bold,
+    Quicksand_400Regular,
+    Quicksand_500Medium,
+    Quicksand_600SemiBold,
+    Quicksand_700Bold
   });
 
   if (!fontsLoaded) {
