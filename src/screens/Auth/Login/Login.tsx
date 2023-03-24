@@ -1,10 +1,13 @@
 import React from 'react';
 import { KeyboardAvoidingView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import CarteiraLogo from '../../../assets/carteiraLogo.png';
 import BackGround from '../../../assets/background.png';
 
-import { InputText } from '../../../components/Input/Input';
+import { InputText } from '../../../components/InputText/InputText';
+import { CheckBox } from '../../../components/CheckBox/CheckBox';
+import { Button } from '../../../components/Button/Button';
 
 import {
   ImageBackground,
@@ -19,6 +22,12 @@ import {
 } from './styles';
 
 export const Login: React.FC = () => {
+  const navigation = useNavigation();
+
+  function handleLogar() {
+    navigation.navigate('TabRoutes');
+  }
+
   return (
     <KeyboardAvoidingView
       behavior='position'
@@ -57,11 +66,17 @@ export const Login: React.FC = () => {
             />
           </InputArea>
 
-          {/* <Input checkbox /> */}
+          <CheckBox title='Lembrar usuário' />
         </ContentBody>
 
         <ContentFooter>
-          {/* <Button>Login</Button> */}
+          <Button
+            title='Logar'
+            onPress={handleLogar}
+            style={{
+              marginTop: 30
+            }}
+          />
         </ContentFooter>
       </Container >
     </KeyboardAvoidingView >

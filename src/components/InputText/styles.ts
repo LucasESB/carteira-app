@@ -19,7 +19,7 @@ export const InputContainer = styled.TextInput`
     border: 0;
     border-radius: 8px;
 
-    font-family: ${({ theme }) => theme.FONTS.CONTENT3}
+    font-family: ${({ theme }) => theme.FONTS.CONTENT2}
     font-size: ${RFValue(16)}px;
     font-weight: 600;
 `;

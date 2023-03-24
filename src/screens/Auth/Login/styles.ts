@@ -17,12 +17,12 @@ export const Container = styled.View`
 `;
 
 export const ContentHeader = styled.View`
-    margin: ${RFValue(80)}px 0;
+    margin: ${RFValue(70)}px 0;
 `;
 
 export const ImageCarteira = styled.Image`
-    width: 72px;
-    height: 72px;
+    width: ${RFValue(72)}px;
+    height: ${RFValue(72)}px;
     margin-bottom: ${RFValue(17)}px;
 `;
 
@@ -35,12 +35,12 @@ export const ContentBody = styled.View`
 `;
 
 export const InputArea = styled.View`
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 `;
 
 export const Label = styled(Content_1)`
     color: 'rgba(130, 130, 130, 1)'; 
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 `;
 
 export const ContentFooter = styled.View`

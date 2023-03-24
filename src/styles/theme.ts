@@ -8,6 +8,7 @@ export default {
         HEADER: 'DMSans_700Bold',
         SUB_HEADER: 'Quicksand_700Bold',
         CONTENT: 'Quicksand_600SemiBold',
+        CONTENT2: 'Quicksand_500Medium',
         CONTENT3: 'Quicksand_400Regular',
     }
 }
