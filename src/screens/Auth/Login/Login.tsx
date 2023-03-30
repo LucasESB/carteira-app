@@ -2,8 +2,8 @@ import React from 'react';
 import { KeyboardAvoidingView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import CarteiraLogo from '../../../assets/carteiraLogo.png';
-import BackGround from '../../../assets/background.png';
+import CarteiraLogo from '../../../assets/imgs/carteiraLogo.png';
+import BackGround from '../../../assets/imgs/background.png';
 
 import { InputText } from '../../../components/InputText/InputText';
 import { CheckBox } from '../../../components/CheckBox/CheckBox';
