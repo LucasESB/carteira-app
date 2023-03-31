@@ -1,7 +1,16 @@
 import React from 'react';
+import { FlatList } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import {
-    Container
+    Container,
+    ContentHeader,
+    TitleHeader,
+    MenuArea,
+    BotaoMenu,
+    TitleBotaoMenu,
+    ContentBody,
+    TitleBody
 } from './styles';
 
 export const Transacoes: React.FC = () => {
@@ -12,17 +21,17 @@ export const Transacoes: React.FC = () => {
 
                 <MenuArea>
                     <BotaoMenu>
-                        <IconTodos />
+                        <Ionicons name='menu-outline' size={50} color='#FFF' />
                         <TitleBotaoMenu>Todos</TitleBotaoMenu>
                     </BotaoMenu>
 
                     <BotaoMenu>
-                        <IconRceitas />
+                        <Ionicons name='add-circle-outline' size={50} color='#FFF' />
                         <TitleBotaoMenu>Receitas</TitleBotaoMenu>
                     </BotaoMenu>
 
                     <BotaoMenu>
-                        <IconDespesas />
+                        <Ionicons name='remove-circle-outline' size={50} color='#FFF' />
                         <TitleBotaoMenu>Despesas</TitleBotaoMenu>
                     </BotaoMenu>
                 </MenuArea>
@@ -31,7 +40,7 @@ export const Transacoes: React.FC = () => {
             <ContentBody>
                 <TitleBody>Histórico de Transações</TitleBody>
 
-                <AreaCalendario>
+                {/* <AreaCalendario>
                     <BotaoMudarMes>
                         <IconBack />
                     </BotaoMudarMes>
@@ -41,9 +50,9 @@ export const Transacoes: React.FC = () => {
                     <BotaoMudarMes>
                         <IconNext />
                     </BotaoMudarMes>
-                </AreaCalendario>
+                </AreaCalendario> */}
 
-                <ListaHitorico />
+                {/* <FlatList /> */}
             </ContentBody>
         </Container>
     )
