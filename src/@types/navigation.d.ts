@@ -4,6 +4,7 @@ export declare global {
             Login: undefined,
             Cadastro: undefined,
             TabRoutes: undefined,
+            ReceitaDespesa: undefined,
         }
     }
 }

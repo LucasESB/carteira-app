@@ -26,6 +26,7 @@ export const TabRoutes = () => {
                     height: 70,
                     paddingTop: 9,
                     paddingBottom: 9,
+                    // backgroundColor: '#FFF',
                     backgroundColor: '#FFF',
 
                     borderRadius: 35,
@@ -33,6 +34,7 @@ export const TabRoutes = () => {
                     marginBottom: 10,
                 },
             }}
+            
         >
             <Screen
                 name='Home'
