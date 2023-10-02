@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { TextInputProps, TouchableOpacity } from 'react-native';
+import { TextInputChangeEventData, TextInputProps, TouchableOpacity } from 'react-native';
 import { useTheme } from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { Container, InputContainer } from './styles';
 
-interface InputTextProps {
+interface InputMoneyProps {
     iconName?: React.ComponentProps<typeof Ionicons>["name"];
     iconSize?: number;
     iconColor?: string;
 }
 
-export const InputText: React.FC<InputTextProps & TextInputProps> = ({
-    secureTextEntry,
+export const InputMoney: React.FC<InputMoneyProps & TextInputProps> = ({
     iconName,
     iconSize,
     iconColor,
@@ -20,32 +19,27 @@ export const InputText: React.FC<InputTextProps & TextInputProps> = ({
 }) => {
     const { COLORS } = useTheme();
 
-    const [secury, setSecury] = useState(secureTextEntry);
+    const [valor, setValor] = useState('0.00');
+
+    function formatarValor(novoValor: string) {
+        setValor(novoValor);
+    }
 
     return (
         <Container>
             <InputContainer
                 {...rest}
-                inputMode='text'
-                secureTextEntry={secury}
+                value={valor}
+                inputMode='decimal'
                 placeholderTextColor={COLORS.GRAY_BLUE}
+                onChangeText={e => formatarValor(e)}
             />
-
             {iconName && (
                 <Ionicons
                     name={iconName}
                     size={iconSize || 24}
                     color={iconColor || COLORS.GRAY_BLUE}
                 />
-            )}
-
-            {secureTextEntry && (
-                <TouchableOpacity onPress={() => setSecury(!secury)}>
-                    <Ionicons name={secury ? 'eye-off-outline' : 'eye-outline'}
-                        size={iconSize || 24}
-                        color={iconColor || COLORS.GRAY_BLUE}
-                    />
-                </TouchableOpacity>
             )}
         </Container>
     )

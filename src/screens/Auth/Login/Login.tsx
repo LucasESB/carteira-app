@@ -25,7 +25,7 @@ export const Login: React.FC = () => {
   const navigation = useNavigation();
 
   function handleLogar() {
-    navigation.navigate('TabRoutes');
+    navigation.navigate('AppRoutes');
   }
 
   return (

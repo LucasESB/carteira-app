@@ -21,8 +21,8 @@ import {
 
 export const Transacoes: React.FC = () => {
     const navigation = useNavigation();
-    
-    function hangleAbriTelaReceitaDespesa(){
+
+    function hangleAbriTelaReceitaDespesa() {
         navigation.navigate('ReceitaDespesa');
     }
 
@@ -35,7 +35,9 @@ export const Transacoes: React.FC = () => {
             <ContentBody>
                 <TitleBody>Histórico de Transações</TitleBody>
 
-                {/* <AreaCalendario>
+                {
+                //TODO: Criar função para filtrar por periodo
+                /* <AreaCalendario>
                     <BotaoMudarMes>
                         <IconBack />
                     </BotaoMudarMes>
@@ -64,6 +66,7 @@ export const Transacoes: React.FC = () => {
                     ItemSeparatorComponent={() => (<View style={{ height: 15 }}></View>)}
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => (
+                        //TODO: Criar função de arrastar pro lado e aparecer opção de editar
                         <ContentFlat key={item.id}>
                             <IconTransacao>
                                 <Ionicons

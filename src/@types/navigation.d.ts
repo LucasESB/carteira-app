@@ -3,8 +3,8 @@ export declare global {
         interface RootParamList {
             Login: undefined,
             Cadastro: undefined,
-            TabRoutes: undefined,
-            ReceitaDespesa: undefined,
+            AppRoutes: undefined,
+            ReceitaDespesa?: { id: number },
         }
     }
 }
