@@ -20,7 +20,7 @@ export const ReceitaDespesa: React.FC = () => {
 
             <ContentHeader>
                 <Cifrao>R$</Cifrao>
-                <InputMoney />
+                <InputMoney valor={0.00}/>
             </ContentHeader>
         </Container>
     )
